@@ -2,12 +2,13 @@
 import { AppBar, Box, Button, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from "@mui/material";
 import { useState } from "react";
 import { Menu } from "@mui/icons-material";
+import "./assets/style.scss";
 
 const navItems = ["Résultats"]
 const drawerWidth = 500;
 
 function Header(props) {
-    const { window } = props;
+    const { window, color } = props;
     const [mobileOpen, setMobileOpen] = useState(false);
   
     const handleDrawerToggle = () => {
@@ -36,8 +37,8 @@ function Header(props) {
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <AppBar component="nav">
-                <Toolbar className="header__navigation">
+            <AppBar component="nav" color={color}>
+                <Toolbar className="navigation">
                     <IconButton color="inherit" aria-label="open drawer" edge="start" onClick={handleDrawerToggle} sx={{ mr: 2, display: { sm: 'none' } }}> 
                         <Menu />
                     </IconButton>
