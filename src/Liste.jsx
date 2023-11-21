@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Paper, Table, TableBody, TableCell, TableContainer, TableFooter, TableHead, TableRow } from "@mui/material";
 import { useState } from "react";
 import Pagination from "./Pagination";
@@ -56,7 +55,7 @@ function Liste(props) {
 
                 <TableFooter>
                     <TableRow>
-                        <Pagination 
+                        <Pagination
                             rowsPerPageOptions={[5, 10, 25, { label: 'All', value: -1 }]}
                             colSpan={3}
                             count={rows.length}
